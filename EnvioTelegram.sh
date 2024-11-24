@@ -15,8 +15,8 @@
 # ===========================================
 
 # Configuración general
-BotServers=("127.0.0.1")
-UrlBot="http://%s:8443"
+BotServers=("IP-BOTS-ERVER")
+UrlBot="http://%s:PUERTO"
 BotToken="b7f5c3a8d9e4f1a2b3c4d5e6f7a8b9c0"
 log_dir="/home/python/servercentralizado/logs"
 log_file="$log_dir/message-bot_Client.log"
@@ -96,8 +96,13 @@ check_log_status() {
 # Función para verificar si el servicio API está disponible
 check_api_status() {
     local server="$1"
+    local url="$(printf $UrlBot "$server")/health"
     local test_response
-    test_response=$(curl -s -m 5 "$(printf $UrlBot "$server")/health" 2>/dev/null)
+
+    # Mensaje de depuración para ver la URL
+    log_message "DEBUG" "Verificando URL: $url"
+
+    test_response=$(curl -s -m 5 "$url" 2>/dev/null)
     if [ $? -eq 0 ]; then
         if [ "$(echo "$test_response" | jq -r '.status' 2>/dev/null)" == "success" ]; then
             return 0
@@ -251,6 +256,9 @@ EOF
 )
         fi
     fi
+
+    # Mensaje de depuración para ver el JSON construido
+    log_message "DEBUG" "JSON construido: $json_data"
 
     response=$(curl -s -m 10 -d "$json_data" \
         -H "Content-Type: application/json" \
