@@ -40,6 +40,29 @@
 ### 🏗️ Arquitectura Centralizada
 
 ```mermaid
+%%{
+  init: {
+    'theme': 'base',
+    'themeVariables': {
+      'darkMode': true,
+      'background': '#ffffff',
+      'primaryColor': '#2ecc71',
+      'primaryTextColor': '#fff',
+      'primaryBorderColor': '#333',
+      'lineColor': '#666',
+      'secondaryColor': '#3498db',
+      'tertiaryColor': '#e74c3c',
+      'dark': {
+        'background': '#252525',
+        'primaryColor': '#2ecc71',
+        'secondaryColor': '#3498db',
+        'tertiaryColor': '#e74c3c',
+        'primaryTextColor': '#fff',
+        'primaryBorderColor': '#fff'
+      }
+    }
+  }
+}%%
 graph LR
     A[Servidor 1] -->|HTTP| D[Servidor API Central]
     B[Servidor 2] -->|HTTP| D
