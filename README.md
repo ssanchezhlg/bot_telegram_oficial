@@ -39,22 +39,17 @@
 
 ### 🏗️ Arquitectura Centralizada
 
-```mermaid
-graph LR
-    A[Servidor 1] -->|HTTP| D[Servidor API Central]
-    B[Servidor 2] -->|HTTP| D
-    C[Servidor 3] -->|HTTP| D
-    D -->|HTTPS| E[Internet]
-    E -->|Bot API| F[Telegram]
-
-    classDef servidor fill:#4CAF50,color:white;
-    classDef api fill:#2196F3,color:white;
-    classDef externo fill:#F44336,color:white;
-    
-    class A,B,C servidor;
-    class D api;
-    class E,F externo;
-```
+<pre>
+┌──────────┐     ┌─────────────────┐     ┌──────────┐
+│Servidor 1├────►│                 │     │          │
+└──────────┘     │                 │     │          │
+┌──────────┐     │  Servidor API   ├────►│ Telegram │
+│Servidor 2├────►│    Central      │     │          │
+└──────────┘     │                 │     │          │
+┌──────────┐     │                 │     │          │
+│Servidor 3├────►│                 │     │          │
+└──────────┘     └─────────────────┘     └──────────┘
+</pre>
 
 </div>
 
