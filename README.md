@@ -432,8 +432,8 @@ echo -e "$message" | mailx -s "✨ Servidor Iniciado: $hostname" $destinatarios
 
 ¿Encontraste un bug? ¿Tienes una idea? ¡Nos encantaría escucharte!
 
-[![Issues](https://img.shields.io/badge/Issues-Reportar_Bug-red?style=for-the-badge&logo=github)](https://github.com/username/repo/issues)
-[![PRs](https://img.shields.io/badge/PRs-Bienvenidos-brightgreen?style=for-the-badge&logo=github)](https://github.com/username/repo/pulls)
+[![Issues](https://img.shields.io/badge/Issues-Reportar_Bug-red?style=for-the-badge&logo=github)](https://github.com/ssanchezhlg/bot_telegram_oficial/issues)
+[![PRs](https://img.shields.io/badge/PRs-Bienvenidos-brightgreen?style=for-the-badge&logo=github)](https://github.com/ssanchezhlg/bot_telegram_oficial)
 
 ## 📄 Licencia
 
