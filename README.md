@@ -41,12 +41,12 @@
 
 ```mermaid
 graph LR
-    style A fill:#e1f5fe,stroke:#01579b
-    style B fill:#e1f5fe,stroke:#01579b
-    style C fill:#e1f5fe,stroke:#01579b
-    style D fill:#bbdefb,stroke:#0d47a1
-    style E fill:#e3f2fd,stroke:#0d47a1
-    style F fill:#b3e5fc,stroke:#01579b
+    style A fill:#f9f9f9,stroke:#666
+    style B fill:#f9f9f9,stroke:#666
+    style C fill:#f9f9f9,stroke:#666
+    style D fill:#e1e1e1,stroke:#333
+    style E fill:#f9f9f9,stroke:#333
+    style F fill:#e1e1e1,stroke:#666
     
     A[Servidor 1] --> D[Servidor API Central]
     B[Servidor 2] --> D
