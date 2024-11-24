@@ -40,29 +40,7 @@
 ### 🏗️ Arquitectura Centralizada
 
 ```mermaid
-%%{
-  init: {
-    'theme': 'base',
-    'themeVariables': {
-      'darkMode': true,
-      'background': '#ffffff',
-      'primaryColor': '#2ecc71',
-      'primaryTextColor': '#fff',
-      'primaryBorderColor': '#333',
-      'lineColor': '#666',
-      'secondaryColor': '#3498db',
-      'tertiaryColor': '#e74c3c',
-      'dark': {
-        'background': '#252525',
-        'primaryColor': '#2ecc71',
-        'secondaryColor': '#3498db',
-        'tertiaryColor': '#e74c3c',
-        'primaryTextColor': '#fff',
-        'primaryBorderColor': '#fff'
-      }
-    }
-  }
-}%%
+%%{init: {'theme': 'default' }}%%
 graph LR
     A[Servidor 1] -->|HTTP| D[Servidor API Central]
     B[Servidor 2] -->|HTTP| D
@@ -70,12 +48,13 @@ graph LR
     D -->|HTTPS| E[Internet]
     E -->|Bot API| F[Telegram]
 
-    classDef default fill:#2ecc71,stroke:#333,stroke-width:2px,color:white;
-    classDef api fill:#3498db,stroke:#333,stroke-width:2px,color:white;
-    classDef external fill:#e74c3c,stroke:#333,stroke-width:2px,color:white;
+    classDef servidor fill:#4CAF50,stroke:#333,color:white;
+    classDef api fill:#2196F3,stroke:#333,color:white;
+    classDef externo fill:#F44336,stroke:#333,color:white;
     
+    class A,B,C servidor;
     class D api;
-    class E,F external;
+    class E,F externo;
 ```
 
 </div>
