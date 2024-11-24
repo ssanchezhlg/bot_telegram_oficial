@@ -41,18 +41,18 @@
 
 ```mermaid
 graph LR
-    style A fill:#f9f9f9,stroke:#666
-    style B fill:#f9f9f9,stroke:#666
-    style C fill:#f9f9f9,stroke:#666
-    style D fill:#e1e1e1,stroke:#333
-    style E fill:#f9f9f9,stroke:#333
-    style F fill:#e1e1e1,stroke:#666
+    A[Servidor 1] -->|HTTP| D[Servidor API Central]
+    B[Servidor 2] -->|HTTP| D
+    C[Servidor 3] -->|HTTP| D
+    D -->|HTTPS| E[Internet]
+    E -->|Bot API| F[Telegram]
+
+    classDef default fill:#2ecc71,stroke:#333,stroke-width:2px,color:white;
+    classDef api fill:#3498db,stroke:#333,stroke-width:2px,color:white;
+    classDef external fill:#e74c3c,stroke:#333,stroke-width:2px,color:white;
     
-    A[Servidor 1] --> D[Servidor API Central]
-    B[Servidor 2] --> D
-    C[Servidor 3] --> D
-    D --> E[Internet]
-    E --> F[Telegram]
+    class D api;
+    class E,F external;
 ```
 
 </div>
