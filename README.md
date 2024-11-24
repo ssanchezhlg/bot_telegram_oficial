@@ -40,7 +40,6 @@
 ### 🏗️ Arquitectura Centralizada
 
 ```mermaid
-%%{init: {'theme': 'default' }}%%
 graph LR
     A[Servidor 1] -->|HTTP| D[Servidor API Central]
     B[Servidor 2] -->|HTTP| D
@@ -48,9 +47,9 @@ graph LR
     D -->|HTTPS| E[Internet]
     E -->|Bot API| F[Telegram]
 
-    classDef servidor fill:#4CAF50,stroke:#333,color:white;
-    classDef api fill:#2196F3,stroke:#333,color:white;
-    classDef externo fill:#F44336,stroke:#333,color:white;
+    classDef servidor fill:#4CAF50,color:white;
+    classDef api fill:#2196F3,color:white;
+    classDef externo fill:#F44336,color:white;
     
     class A,B,C servidor;
     class D api;
