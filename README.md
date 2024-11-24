@@ -39,17 +39,32 @@
 
 ### 🏗️ Arquitectura Centralizada
 
-<pre>
-┌──────────┐     ┌─────────────────┐     ┌──────────┐
-│Servidor 1├────►│                 │     │          │
-└──────────┘     │                 │     │          │
-┌──────────┐     │  Servidor API   ├────►│ Telegram │
-│Servidor 2├────►│    Central      │     │          │
-└──────────┘     │                 │     │          │
-┌──────────┐     │                 │     │          │
-│Servidor 3├────►│                 │     │          │
-└──────────┘     └─────────────────┘     └──────────┘
-</pre>
+<table>
+  <tr>
+    <td align="center">Servidores Internos</td>
+    <td align="center">API Central</td>
+    <td align="center">Servicio Externo</td>
+  </tr>
+  <tr>
+    <td>
+      📡 Servidor 1<br>
+      📡 Servidor 2<br>
+      📡 Servidor 3
+    </td>
+    <td>
+      ⚡ API Central<br>
+      (Gestión de mensajes)
+    </td>
+    <td>
+      🤖 Telegram Bot API
+    </td>
+  </tr>
+  <tr>
+    <td colspan="3" align="center">
+      <small>Comunicación HTTP(S) segura entre todos los componentes</small>
+    </td>
+  </tr>
+</table>
 
 </div>
 
